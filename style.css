@@ -1,0 +1,104 @@
+
+.container{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    border: 1px solid rgba(94, 1, 180, 0.61);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 30px 5px rgba(94, 1, 180, 0.61);
+    
+}
+
+.header{
+  text-align: center;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+   
+}
+
+input{
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.733);
+    height: 30px;
+    padding-left: 5px;
+}
+input:focus{
+ 
+    outline-color:blueviolet;
+}
+
+span{
+    padding: 3px 3px;
+    color:white;
+    border-radius: 5px;
+}
+
+span::before{
+    content:'Total:'
+}
+
+.button{
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: blueviolet;
+    color:white;
+    border: none;
+    cursor: pointer;
+    transition:2s;
+
+}
+button:hover{
+    background-color: rgb(124, 6, 235);
+    letter-spacing: 1px;
+}
+
+table{
+    margin-top: 25px;
+    width: 100%;
+    text-align: center;
+}
+th,td{
+    padding: 5px;
+}
+
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#tbody tr {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+button {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: rgb(111, 6, 209);
+    transform: scale(1.01);
+    color: #fff;
+}
+
+#total {
+    transition: background-color 0.5s ease;
+}

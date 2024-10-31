@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS</title>
+    <link href="style.css" rel="stylesheet"/>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+
+</head>
+<body >
+    
+    <div class="container ">
+        <div class="header">
+            <h1>CRUDS</h1>
+            <H4>CREATE READ UPDATE DELETE SEARCH</H4>
+        </div>
+
+        <input class="mt-2 mb-2" id="title" placeholder="title"/>
+        <div  class="flex">
+            <input onkeyup="getTotal()" type = "number" class="price" id="price" placeholder="price"/>
+            <input onkeyup = "getTotal()" type = "number" class="taxed" id="taxes" placeholder="taxes"/>
+            <input onkeyup = "getTotal()" type = "number"  class="ads" id="ads" placeholder="ads"/>
+            <input onkeyup = "getTotal()" type = "number" class="discount" id="discount" placeholder="discount"/>
+            <span id="total"></span>
+        </div>
+        <input class="mt-2" id="count" type="number" placeholder="count"/>
+        <input class="mt-2"  id="category" placeholder="category"/>
+        <button class="mt-2 button" id="create">Create</button>
+        <input class="mt-2" onkeyup="sreachdata(this.value)" id="search" placeholder="search"/>
+        <div class="mt-2 flex ">
+            <button class="button" onclick="searchby(this.id)" id="searchbytitle">Search By Title</button>
+            <button class="button"  onclick="searchby(this.id)" id="searchbycategory">Search By Category</button>
+        </div>
+        <div class="mt-2 " class="deleteall" id="deleteall"> 
+          
+        </div>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped mt-4">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>TITLE</th>
+                        <th>PRICE</th>
+                        <th>TAXES</th>
+                        <th>ADS</th>
+                        <th>DISCOUNT</th>
+                        <th>TOTAL</th>
+                        <th>COUNT</th>
+                        <th>CATEGORY</th>
+                        <th>UPDATE</th>
+                        <th>DELETE</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                    <!-- بيانات الجدول ستظهر هنا -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
