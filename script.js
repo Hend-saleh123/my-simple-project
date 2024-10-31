@@ -34,7 +34,7 @@ if(localStorage.data != null){
 }
 
 create.onclick = function(){
-  if (!title.value || !price.value || !count.value) {
+  if (!title.value || !price.value || !category.value) {
     alert('Please fill in all required fields (Title, Price, and Count)');
     return; 
   }
