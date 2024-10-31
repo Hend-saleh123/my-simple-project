@@ -34,6 +34,10 @@ if(localStorage.data != null){
 }
 
 create.onclick = function(){
+  if (!title.value || !price.value || !count.value) {
+    alert('Please fill in all required fields (Title, Price, and Count)');
+    return; 
+  }
   let newpro = {
     title: title.value.toLowerCase(),
     price: price.value,
